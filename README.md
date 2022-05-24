@@ -12,7 +12,7 @@
 
 <strong>Tech Used:</strong> <em>JavaScript</em>
 
-<p>I look forward to challenging myself to a codewars solution at the beginning of each day to strengthen my knowlege and problem solving skills.</p>
+<p>I look forward to challenging myself to a codewars solution at the beginning of each day to strengthen my knowledge and problem solving skills.</p>
 
 <h2>Optimizations</h2>
 
@@ -20,4 +20,4 @@
 
 <h2>Lessons Learned:</h2>
 
-<p>Early on when I began the daily code challenges, I learned the importance of pseudo code. Being more patient with my solutions allowed me to give more attention to detail and focus on what was required to solve each kata. Not every challenge can be solved in one line or in a short time. It is okay to stop and think.</p>
+<p>When I began the daily code challenges, I learned the importance of pseudo code. Being more patient with my solutions allowed me to give more attention to detail and focus on what was required to solve each kata. Not every challenge can be solved in one line or in a short time. It is okay to stop and think.</p>
