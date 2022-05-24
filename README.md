@@ -9,11 +9,11 @@
 
 <h2>How It's Made</h2>
 
-<h4>Tech Used:</h4> JavaScript
+<strong>Tech Used:</strong> JavaScript
 
 <p>I look forward to challenging myself to a codewars solution at the beginning of each day to strengthen my knowlege and problem solving skills.</p>
 
-</h2>Optimizations</h2>
+<h2>Optimizations</h2>
 
 <p>I will regularly resubmit completed challenges in an effort to make them more efficient, readable, or simply to study the implemented process.</p>
 
