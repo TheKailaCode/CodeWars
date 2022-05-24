@@ -1,11 +1,12 @@
 <h1 align="center">CodeWars Challenges</h1>
 
+<p align="center">A list of completed daily codewars challenges. Currently Ranked in the top 38th percentile on particpant leaderboard, having completed over 80+ challenges and pushing more than 10 solutions every week.</p>
+
+<br />
 
 <img width="100%" alt="codewarsRepoReadme" src="https://user-images.githubusercontent.com/100878769/170132508-f0274cc0-ccbf-45b2-bbdb-304459ad8746.png">
 
 <br />
-
-<p>A list of completed daily codewars challenges. Currently Ranked in the top 38th percentile on particpant leaderboard, having completed over 80+ challenges and pushing more than 10 solutions every week.</p>
 
 <h2>How It's Made:</h2>
 
