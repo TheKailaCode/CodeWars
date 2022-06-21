@@ -4,7 +4,7 @@
 
 <br />
 
-<img width="100%" alt="codewarsRepoReadme" src="https://user-images.githubusercontent.com/100878769/170132508-f0274cc0-ccbf-45b2-bbdb-304459ad8746.png">
+<img width="100%" alt="codewars dashboard" src="https://user-images.githubusercontent.com/100878769/174830572-88098e8f-ed6b-4db0-9066-588399325e87.png">
 
 <br />
 
