@@ -1,6 +1,6 @@
 <h1 align="center">CodeWars Challenges</h1>
 
-<p align="center">A list of completed daily codewars challenges. Currently Ranked in the top 38th percentile on particpant leaderboard, having completed over 80+ challenges and pushing more than 10 solutions every week.</p>
+<p align="center">A list of completed daily codewars challenges. Currently Ranked in the top 21st percentile on the particpant leaderboard, having completed over 120+ challenges and pushing more than 10 solutions every week.</p>
 
 <br />
 
