@@ -64,3 +64,27 @@ function humanReadable(seconds) {
 }
 
 //humanReadable(359999)
+
+
+// Abbreviate a Two Word Name
+
+// PARAMETERS - Given a first and last name separated by a space. Possible hyphenated names.
+
+// RESULTS - Two letters separated by a period. The first letter of the first word in the input and the first letter of the second word in the input. Should be capitalized.
+
+// EXAMPLES - 
+
+// (abbrevName("Sam Harris"), "S.H");
+// (abbrevName("Patrick Feenan"), "P.F");
+// (abbrevName("Evan Cole"), "E.C");
+// (abbrevName("P Favuzzi"), "P.F");
+// (abbrevName("David Mendieta"), "D.M");
+
+// PSEUDOCODE - Split the name input into an array with a legnth of 2. Use a template literal to grab the first letter of the first array element and the first letter of the second array element separated by a period.
+
+function abbrevName(name) {
+    let abbr = name.split(' ')
+    console.log(`${abbr[0][0].toUpperCase()}.${abbr[1][0].toUpperCase()}`)
+
+}
+abbrevName('sam harris')
