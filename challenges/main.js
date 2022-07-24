@@ -87,4 +87,29 @@ function abbrevName(name) {
     console.log(`${abbr[0][0].toUpperCase()}.${abbr[1][0].toUpperCase()}`)
 
 }
-abbrevName('sam harris')
+// abbrevName('sam harris')
+
+
+// Create Phone Number
+
+// PARAMETERS - A flat array containing 10 non-negative integers
+
+// RESULTS - A 10 digit string of numbers in format of a phone number where the first 3 integers are wrapped in parentheses, separated by a space followed by the following three digits then a dash before the last four digits. 
+
+// EXAMPLES - 
+
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+// createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]), "(111) 111-1111"
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]), "(123) 456-7890"
+
+// PSEUDOCODE - Use the slice method to grab correct format of numbers from the array and save them into three variables. Join each array to turn into string of integers. Use template literal to add parentheses and dash in respective areas in integer sequence. 
+
+function createPhoneNumber(numbers) {
+    let areaCode = numbers.slice(0, 3).join('')
+    let firstSet = numbers.slice(3, 6).join('')
+    let lastSet = numbers.slice(-4).join('')
+
+    return `(${areaCode}) ${firstSet}-${lastSet}`
+}
+
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
