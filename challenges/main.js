@@ -113,3 +113,37 @@ function createPhoneNumber(numbers) {
 }
 
 // createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+
+// Valid Parentheses
+
+// PARAMETERS - A string containing opening a closing parentheses in any order and any amount
+// RESULTS - A boolean based on whether the string of parentheses are valid. Does each set have a closing parenthese to accompany it. Empty string should return false.
+// EXAMPLES - 
+// "()"              =>  true
+// ")(()))"          =>  false
+// "("               =>  false
+// "(())((()())())"  =>  true
+// PSEUDOCODE - Split string of parentheses into an array. Filter the array for both opening parentheses and closing parentheses and save each into their own variables. Do a conditional to see if the legnth of the filtered opening parenthese array is equal in legnth to the closing parentheses array. Return true if so or if empty return false otherwise. 
+
+function validParentheses(parens) {
+    let openCount = 0
+    let closeCount = 0
+    for (let i = 0; i <= parens.length; i++) {
+        if (parens[i] == '(') {
+            openCount = openCount + 1
+        } else if (parens[i] == ')') {
+            closeCount = closeCount + 1
+        }
+    }
+
+    if (openCount === closeCount) {
+        console.log(true)
+    } else if (parens.length === 0) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+}
+
+// validParentheses('))(')
