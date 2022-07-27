@@ -147,3 +147,30 @@ function validParentheses(parens) {
 }
 
 // validParentheses('))(')
+
+
+// PARAMETERS - An integeger either positive or negative. Can be zero. 
+// RESULTS -  A single integer that is the sum of all the multiples of 3 and 5 below the given integer parameter. Return 0 if the parameter is negative. When a number is a multiple of both 3 and 5, it should only be counted once in the sum. 
+// EXAMPLES - test(10,23)
+// PSEUDOCODE - Create an empty variable for sum of multiples. Create a for loop from 0 to number. Use an if then statement to see if i is negative. If not create nested if then state to see if i mod 3 & 5 is equal to zero. If false is return continue to find if i mod 3 equals 0 then if i mod 5 is equal to zero. In each statement make make the variable equal to the current value of i plus the previous value of i. 
+
+function solution(number) {
+    let sum = 0
+
+    if (number <= 0) {
+        console.log(0)
+    } else {
+        for (let i = 0; i < number; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                sum = sum + i
+            } else if (i % 3 === 0) {
+                sum = sum + i
+            } else if (i % 5 === 0) {
+                sum = sum + i
+            }
+        }
+    }
+    console.log(sum)
+}
+
+// solution(10)
