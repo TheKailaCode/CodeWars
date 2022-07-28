@@ -149,6 +149,8 @@ function validParentheses(parens) {
 // validParentheses('))(')
 
 
+// Multiples of 3 or 5
+
 // PARAMETERS - An integeger either positive or negative. Can be zero. 
 // RESULTS -  A single integer that is the sum of all the multiples of 3 and 5 below the given integer parameter. Return 0 if the parameter is negative. When a number is a multiple of both 3 and 5, it should only be counted once in the sum. 
 // EXAMPLES - test(10,23)
@@ -174,3 +176,31 @@ function solution(number) {
 }
 
 // solution(10)
+
+
+// Who Likes it?
+
+// PARAMETERS - An array of string names. Array may be empty.
+// RESULTS - A string telling who likes this. If array length is 4 or more, the first two indexes should be named only followed by the amount of other indexes in the array as others. If array is empty 'no one' returned.
+// EXAMPLES - 
+// []                                -->  "no one likes this"
+// ["Peter"]                         -->  "Peter likes this"
+// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+// PSEUDOCODE - create if then statement to check if length is greater than 3 if so, return template literal with index 0 and 1 plus the array length minus 2 that like. If array legnth is equal to zero, return no one. Else if array is less than three use a for loop to loop through each array element and append it to the sentence.
+
+function likes(names) {
+    if (names.length === 0) {
+        return "no one likes this"
+    } else if (names.length > 3) {
+        return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+    } else if (names.length === 1) {
+        return `${names} likes this`
+    } else if (names.length === 2) {
+        return `${names[0]} and ${names[1]} like this`
+    } else {
+        return `${names[0]}, ${names[1]} and ${names[2]} like this`
+    }
+}
+//likes(["Jacob", "Alex"])
