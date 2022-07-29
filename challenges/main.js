@@ -204,3 +204,37 @@ function likes(names) {
     }
 }
 //likes(["Jacob", "Alex"])
+
+
+// Array.diff
+
+// PARAMETER - Given two arrays of various lengths. 
+// RESULTS - An array of the result of subtracting the the second array parameter from the first array parameter
+// EXAMPLES - 
+// (arrayDiff([1,2], [1]), [2], "a was [1,2], b was [1]")
+// (arrayDiff([1,2,2], [1]), [2,2], "a was [1,2,2], b was [1]")
+// (arrayDiff([1,2,2], [2]), [1], "a was [1,2,2], b was [2]")
+// (arrayDiff([1,2,2], []), [1,2,2], "a was [1,2,2], b was []")
+// (arrayDiff([], [1,2]), [], "a was [], b was [1,2]")
+// (arrayDiff([1,2,3], [1,2]), [3], "a was [1,2,3], b was [1,2]")
+// PSEUDOCODE - Set a variable to filter the first array to subtract each array element that does not equal the array element in the second array
+
+function arrayDiff(a, b) {
+    let newArr = []
+    if (b.length === 0) {
+        newArr = a
+    } else if (a.length === 0) {
+        newArr = []
+    } else {
+        for (let i = 0; i <= a.length; i++) {
+            for (let j = 0; j <= b.length; j++) {
+                if (i != j) {
+                    newArr = [i]
+                }
+            }
+        }
+    }
+    console.log(newArr)
+}
+
+arrayDiff([1, 2, 2], [1])
