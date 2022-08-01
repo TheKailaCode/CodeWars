@@ -237,4 +237,26 @@ function arrayDiff(a, b) {
     console.log(newArr)
 }
 
-arrayDiff([1, 2, 2], [1])
+// arrayDiff([1, 2, 2], [1])
+
+
+// Stop gninnipS My sdroW!
+
+// PARAMETERS - Given a sentence string with at lease one word
+// RESULTS - The same sentence string but where words that contain five or more letter are reversed. Capital letters remain uppercase.
+// EXAMPLES - 
+// (spinWords("Welcome"), "emocleW");
+// (spinWords("Hey fellow warriors"), "Hey wollef sroirraw");
+// (spinWords("This is a test"), "This is a test");
+// (spinWords("This is another test"), "This is rehtona test");
+// (spinWords("You are almost to the last test"), "You are tsomla to the last test");
+// (spinWords("Just kidding there is still one more"), "Just gniddik ereht is llits one more");
+// (spinWords("Seriously this is the last one"), "ylsuoireS this is the last one");// 
+// PSUEDOCODE - Split the string into an array of words. Map through array to find words that are 5 chars or more with the length property and split reverse join them. join the entire array on the commas to reform the string with the backwards words.
+
+function spinWords(string) {
+    let newArr = string.split(' ')
+    newArr = newArr.map(el => el.length >= 5 ? el.split('').reverse().join('') : el)
+    console.log(newArr.join(' '))
+}
+//spinWords("This is a test")
