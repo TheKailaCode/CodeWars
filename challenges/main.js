@@ -260,3 +260,27 @@ function spinWords(string) {
     console.log(newArr.join(' '))
 }
 //spinWords("This is a test")
+
+
+// The Hashtag Generator
+
+// PARAMETER - A string of words and spaces. Can be an empty string as well. 
+// RESULTS - If the input string is empty, or more than 140 chars, return false. Else, the same string should be returned with a hashtag in front and the words in the string together without spaces in between. The first lettler of each word in the string should be capitalized.
+// EXAMPLES - 
+// " Hello there thanks for trying my Kata"  =>  "#HelloThereThanksForTryingMyKata"
+// "    Hello     World   "       =>  "#HelloWorld"
+// ""            =>  false
+// PSEUDOCODE - Split the string at the spaces. Map over the array of words to capitalize the char at index 0 in each word. Split the string again and rejoin it so that it is one long string. Unshift a hashtag character at the beginning of each string. Find the legnth of the string and use an if then statement to find if the legnth is 0 or 140 chars and return false for either result. 
+
+function generateHashtag(str) {
+    let newArr = str.split(' ').join('')
+    if (str.length === 0) {
+        console.log(false)
+    } else if (newArr.length > 140) {
+        console.log(false)
+    } else {
+        console.log('#' + newArr)
+    }
+}
+
+generateHashtag("  ")
