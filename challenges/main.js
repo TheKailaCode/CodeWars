@@ -283,4 +283,29 @@ function generateHashtag(str) {
     }
 }
 
-generateHashtag("  ")
+//generateHashtag("       ")
+
+
+// Find The Parity Outlier
+
+// PARAMETER - An array of integers either entirely even with an odd outlier or entirely odd with an even outlier. The array as a length of at least 3. We should assume zero is an even number.
+// RESULT - A single integer, the outlier of the sequence of integers from the array.
+// EXAMPLES - 
+//     findOutlier([0, 1, 2]), 1
+//     findOutlier([1, 2, 3]), 2
+//     findOutlier([2,6,8,10,3]), 3
+//     findOutlier([0,0,3,0,0]), 3
+//     findOutlier([1,1,0,1,1]), 0
+// PSEUDOCODE - Filter the array for values modulo 2 equal to zero. Also filter the array for values modulo 2 greater than zero. Compare the length of each new array. The array that returns only 1 element should be converted to single integer and returned. 
+
+function findOutlier(integers) {
+    let evens = integers.filter(el => el % 2 === 0)
+    let odds = integers.filter(el => el % 2 != 0)
+    if (evens.length === 1) {
+        return evens[0]
+    } else if (odds.length === 1) {
+        return odds[0]
+    }
+}
+
+//findOutlier([0, 1, 2])
