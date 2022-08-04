@@ -309,3 +309,26 @@ function findOutlier(integers) {
 }
 
 //findOutlier([0, 1, 2])
+
+// Well of Ideas - Easy Version
+
+// PARAMETER - An array of good or bad strings
+// RESULT - A string. 'Fail' if good is not in array. 'Publish' if 1 or 2 goods. 'i smell..' if more than 2 goods.
+// EXAMPLE - 
+// well(['bad', 'bad', 'bad']), 'Fail!'
+// well(['good', 'bad', 'bad', 'bad', 'bad']), 'Publish!'
+// well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good']), 'I smell a series!'
+// PSEUDOCODE - Filter the input array for elements that match 'good'. Use if then statement to check the length of the output array to determing the return string.
+
+function well(x) {
+    let goods = x.filter(el => el === 'good')
+    if (goods.length === 0) {
+        console.log('Fail!')
+    } else if (goods.length === 1 || goods.length === 2) {
+        console.log('Publish!')
+    } else if (goods.length > 2) {
+        console.log('I smell a series!')
+    }
+}
+
+// well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good'])
