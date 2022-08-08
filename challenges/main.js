@@ -332,3 +332,39 @@ function well(x) {
 }
 
 // well(['good', 'bad', 'bad', 'bad', 'bad', 'good', 'bad', 'bad', 'good'])
+
+
+// Convert string to camel case
+
+// PARAMETER - A string containing dash or underscore delimeters. Beginning of words may be upper or lowercase.
+// RESULT - A string without spaces or delimeters in camel case where the beginning of each new word is capitalized. The first word should only be capitalized if the original word was capitalized in the input. 
+// EXAMPLES - 
+// toCamelCase(''), '', "An empty string was provided but not returned")
+// toCamelCase("the_stealth_warrior"), "theStealthWarrior", "toCamelCase('the_stealth_warrior') did not return correct value")
+// toCamelCase("The-Stealth-Warrior"), "TheStealthWarrior", "toCamelCase('The-Stealth-Warrior') did not return correct value")
+// toCamelCase("A-B-C"), "ABC", "toCamelCase('A-B-C') did not return correct value")
+// PSEUDOCODE - Create a variable holding the possible delimeters. Split the string on the delimeter. Filter the split string for chars that are not equal to the variable holding the delimeter. Join the string. split the string by each word. Create variables to hold each word with the first letter capitalized. Return each varable concatenated without spaces.
+
+function toCamelCase(str) {
+    let strDelims = ['-', '_']
+    let newStr = str.map(el => el.includes(strDelims) ? '' : el)
+    console.log(newStr)
+}
+// toCamelCase("the_stealth_warrior")
+
+
+// Vowel Count
+
+function getCount(str) {
+    let newStr = str.split('')
+    let count = 0
+    for (let i = 0; i <= newStr.length; i++) {
+        if (newStr[i] === 'a' || newStr[i] === 'e' || newStr[i] === 'i' || newStr[i] === 'o' || newStr[i] === 'u') {
+            count += 1
+        } else {
+            count += 0
+        }
+    }
+
+    return count
+}
