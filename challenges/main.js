@@ -368,3 +368,25 @@ function getCount(str) {
 
     return count
 }
+
+
+// Four/Seven
+
+// PARAMETER - An integer
+// RESULT - If the integer iis 4 return 7. If the integer is 7 return 4. If anything else, return 0. Cannot use if/then, ternary, or switch statement.
+// EXAMPLE - 
+// fourSeven(4), 7, "n = 4 should return 7"
+// fourSeven(7), 4, "n = 7 should return 4"
+// PSEUDOCODE - Return 28 divided by n to get either 4 or 7. Set a variable to hold 28 divided n != 4 or 7. reassign that false variable to equal 0.
+
+
+function fourSeven(n) {
+    let negatives = 28 / n < 0
+    negatives = 0
+    let falseResult = 28 / n !== 4 && 28 / n !== 7
+    falseResult = 0
+    let idealResult = 28 / n === 4 || 28 / n === 7
+    idealResult = 28 / n
+    return idealResult || falseResult || negatives
+}
+fourSeven(4)
