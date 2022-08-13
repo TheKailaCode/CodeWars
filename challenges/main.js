@@ -430,3 +430,20 @@ function getPlanetName(id) {
 
     return name;
 }
+
+
+// Calculate BMI
+
+function bmi(weight, height) {
+    let bmiResult = weight / (height * height)
+
+    if (bmiResult <= 18.5) {
+        return "Underweight"
+    } else if (bmiResult > 18.5 && bmiResult <= 25.0) {
+        return "Normal"
+    } else if (bmiResult <= 30.0) {
+        return "Overweight"
+    } else if (bmiResult > 30) {
+        return "Obese"
+    }
+}
