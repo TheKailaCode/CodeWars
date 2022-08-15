@@ -457,3 +457,37 @@ function findNeedle(haystack) {
         }
     }
 }
+
+
+
+//Disemvowel Trolls
+
+// PARAMETERS - A string of any length that contains words with consants and vowels and capital and lowercase letters
+// RESULTS - A string with all vowels removed from it. Letters and punctuation should remain in the same order. **Y is not a vowel.
+// EXAMPLE - 
+//disemvowel("This website is for losers LOL!"), "Ths wbst s fr lsrs LL!")
+//disemvowel("No offense but,\nYour writing is among the worst I've ever read"), "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
+//disemvowel("What are you, a communist?"), "Wht r y,  cmmnst?")
+// PSEUDOCODE - Split the string into an array or letters. Create an array of vowels. Map over the array of letters to see if it includes any of the letters from the vowel array. If it does, return an empty string space if not, return that letter. Then join the string back together.
+
+function disemvowel(str) {
+    let lettersArr = str.split('')
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+    let result = lettersArr.map(letter => letter === vowels ? '' : '').join('')
+    console.log(result)
+}
+//disemvowel("What are you, a communist?")
+
+
+// Are You Playing Banjo?
+
+function areYouPlayingBanjo(name) {
+    let nameCheck = name.split('')
+
+    if (nameCheck[0] === 'R' || nameCheck[0] === 'r') {
+        return `${name} plays banjo`
+    } else {
+        return `${name} does not play banjo`
+    }
+}
+// areYouPlayingBanjo('Ringo')
