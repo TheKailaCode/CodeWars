@@ -514,3 +514,11 @@ function sumTwoSmallestNumbers(numbers) {
     let newArr = numbers.sort((a, b) => a - b)
     return newArr[0] + newArr[1]
 }
+
+
+// Binary Addition
+
+function addBinary(a, b) {
+    let add = a + b
+    return add.toString(2)
+}
