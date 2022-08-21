@@ -522,3 +522,96 @@ function addBinary(a, b) {
     let add = a + b
     return add.toString(2)
 }
+
+// Is he gonna survive?
+
+// PARAMETER - Given 2 integers. The number of bullets and the number of dragons. Two bullets will kill a dragon. Input will not be negative and no maximum.
+// RESULT - A boolean based on if there is enough bullets to kill all of the dragons. True if there is and false if not.
+// EXAMPLE - 
+// (hero(7, 4), false);
+// (hero(10, 5), true);
+// (hero(4, 5), false);
+// (hero(100, 40), true);
+// (hero(1500, 751), false);
+// (hero(0, 1), false);
+// PSEUDOCODE - Multiply dragons times 2. Subtract dragons from bullets. If the answer is greater than or equal to 0 return true if the answer is less than 0 return false. 
+
+function hero(bullets, dragons) {
+    let result = bullets - (dragons * 2)
+    console.log(result >= 0 ? true : false)
+}
+// hero(1500, 751)
+
+
+// Basic Mathematical Operations
+
+// function basicOp(operation, value1, value2) {
+
+//     let sum = value1 + value2
+//     let sub = value1 - value2
+//     let multiply = value1 * value2
+//     let divide = value1 / value2
+
+//     if (operation === '+') {
+//         console.log(sum)
+//     } else if (operation == '-') {
+//         console.log(sub)
+//     } else if (operation == '*') {
+//         console.log(multiply)
+//     } else if (operation == '/') {
+//         console.log(divide)
+//     }
+// }
+
+// basicOp('-', 15, 18)
+
+
+// How good are you really?
+
+function betterThanAverage(classPoints, yourPoints) {
+    let sum = classPoints.reduce((a, b) => a + b, 0)
+    let entireClass = sum + yourPoints
+    console.log(entireClass)
+    let divisor = classPoints.length + 1
+    console.log(entireClass / divisor)
+    if (yourPoints > entireClass / divisor) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+
+}
+
+// betterThanAverage([2, 3], 5)
+
+
+// Invert values
+
+function invert(array) {
+    return array.map(el => -(el))
+}
+
+// invert([1,-2,3,-4,5]), [-1,2,-3,4,-5])
+
+
+// Beginner Series #1 School Paperwork
+
+// PARAMETER - Given two integer numbers that can possibly be negative or 0. 
+// RESULT - An integer greater than or equal to 0. We will receive 0 if either of the inputs are negative or equal to zero.
+// EXAMPLE - 
+//(paperwork(5,5), 25, 'Failed at paperwork(5, 5)');
+//(paperwork(5,-5), 0, 'Failed at paperwork(5, -5)');
+//(paperwork(-5,-5), 0, 'Failed at paperwork(-5, -5)');
+//(paperwork(-5,5), 0, 'Failed at paperwork(-5, 5)');
+//(paperwork(5,0), 0, 'Failed at paperwork(5, 0)');
+// PSEUDOCODE - We need five blank sheets of paper per student. Multiply the amount of paper that needs to be copied by the amount of students that need work copied.
+
+function paperwork(n, m) {
+    if (m < 0 || n < 0) {
+        return 0
+    } else {
+        return m * n
+    }
+}
+
+// paperwork(-5, -5)
