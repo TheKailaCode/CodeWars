@@ -615,3 +615,25 @@ function paperwork(n, m) {
 }
 
 // paperwork(-5, -5)
+
+
+// Count by X
+
+// PARAMETER - Given 2 positive integers. The first integer will be the number to count by. The second integer will be the number to count up to.
+// RESULT - An array of integers counting by the first integer up to the second integer parameters
+// EXAMPLE - 
+//countBy(1,10), [1,2,3,4,5,6,7,8,9,10], "Array does not match"
+// countBy(2,5), [2,4,6,8,10], "Array does not match"
+// PSEUDOCODE - Create an empty array variable. Create a for loop where i starts at 0 and ends at the second parameter and each iteration will increase by the first integer parameter. Within the loop, push each iteration to the empty variable array that was created. Return the variable once the loop is broken.
+
+function countBy(x, n) {
+    let z = [];
+    let y = n * x
+    for (let i = x; i <= y; i++) {
+        if (i % x === 0) {
+            z.push(i)
+        }
+    }
+    console.log(z)
+}
+// countBy(1, 10)
