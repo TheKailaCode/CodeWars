@@ -637,3 +637,21 @@ function countBy(x, n) {
     console.log(z)
 }
 // countBy(1, 10)
+
+
+// DNA to RNA Conversion
+
+// PARAMETER - A striing with the letters GCAT
+// RESULT - A string where all of the T's are replaced with U's
+// EXAMPLE -
+//DNAtoRNA("TTTT"), "UUUU")
+//DNAtoRNA("GCAT"), "GCAU")
+//DNAtoRNA("GACCGCCGCC"), "GACCGCCGCC")
+// PSEUDOCODE - Split the string into individual letters. Map over the array of letters and if a letter is T return U else return the letter.
+
+function DNAtoRNA(dna) {
+    let result = dna.split('').map(el => el === 'T' ? 'U' : el).join('')
+    console.log(result)
+}
+
+// DNAtoRNA("GACCGCCGCC")
