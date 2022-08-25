@@ -662,3 +662,28 @@ function DNAtoRNA(dna) {
 function sumStr(a, b) {
     return String(Number(a) + Number(b))
 }
+
+
+
+// Stringy Strings
+
+// PARAMETER - An iinteger that reflects the size or length of what the string should be. The input will always be positive whole numbers.
+// RESULT - A string with a length based on the parameter filled with alternating 1's and 0's. Should begin with 1.
+// EXAMPLE - 
+// a string with size 6 should return :'101010'.
+// with size 4 should return : '1010'.
+// with size 12 should return : '101010101010'.
+// PSEUDOCODE - Create an empty string variable. Create a traditional for loop beginning at 0 up to the input parameter size. On each iteration concatenate 10 to the previous interation on the string variable. Return the string variable.
+
+function stringy(size) {
+    let bin = ''
+    for (let i = 1; i <= size; i++) {
+        if (i % 2 === 0) {
+            bin += '0'
+        } else {
+            bin += '1'
+        }
+    }
+    console.log(bin)
+}
+// stringy(20)
