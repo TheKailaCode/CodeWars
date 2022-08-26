@@ -687,3 +687,55 @@ function stringy(size) {
     console.log(bin)
 }
 // stringy(20)
+
+
+// String cleaning
+
+// PARAMETER - A string containing letters, numbers, and/or punctuation marks
+// RESULT - A string with all numbers removed
+// EXAMPLE - 
+// stringClean(""), ""
+// stringClean("! !"), "! !"
+// stringClean("123456789"), ""
+// stringClean("(E3at m2e2!!)"), "(Eat me!!)"
+// stringClean("Dsa32 cdsc34232 csa!!! 1I 4Am cool!"), "Dsa cdsc csa!!! I Am cool!"
+// stringClean("A1 A1! AAA   3J4K5L@!!!"), "A A! AAA   JKL@!!!"
+// stringClean("Adgre2321 A1sad! A2A3A4 fv3fdv3J544K5L@"), "Adgre Asad! AAA fvfdvJKL@"
+// stringClean("Ad2dsad3ds21 A  1$$s122ad! A2A3Ae24 f44K5L@222222 "), "Addsadds A  $$sad! AAAe fKL@ "
+// stringClean("33333Ad2dsad3ds21 A3333  1$$s122a!d! A2!A!3Ae$24 f2##222 "), "Addsadds A  $$sa!d! A!A!Ae$ f## "
+// stringClean("My \"me3ssy\" d8ata issues2! Will1 th4ey ever, e3ver be3 so0lved?"), "My \"messy\" data issues! Will they ever, ever be solved?"
+// stringClean("Wh7y can't we3 bu1y the goo0d software3? #cheapskates3"), "Why can't we buy the good software? #cheapskates"
+// PSEUDOCODE - Split the string into individual characters. Map over the array of letters and if the type of char is a number, replace it with an empty string space otherwise return the char. Join the array back together and return.
+
+function stringClean(s) {
+    let arr = s.split('')
+    let newArr = arr.map(el => el.split(' '))
+    let iter = newArr.filter(x => x != Number(x))
+    console.log(iter)
+}
+
+// stringClean("(E3at m2e2!!)")
+
+
+// Training JS #3: Basic data types--String
+
+var a1 = "A", a2 = "a", b1 = "B", b2 = "b", c1 = "C", c2 = "c", d1 = "D", d2 = "d", e1 = "E", e2 = "e", n1 = "N", n2 = "n"
+function Dad() {
+    return d1 + a2 + d2;
+}
+function Bee() {
+    return b1 + e2 + e2;
+}
+function banana() {
+    return b2 + a2 + n2 + a2 + n2 + a2;
+}
+
+function answer1() {
+    return "no";
+}
+function answer2() {
+    return "no";
+}
+function answer3() {
+    return "yes";
+}
