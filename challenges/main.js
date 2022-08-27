@@ -739,3 +739,24 @@ function answer2() {
 function answer3() {
     return "yes";
 }
+
+
+// Training JS #18: Methods of String object--concat() split() and its good friend join()
+
+function splitAndMerge(string, separator) {
+    let words = string.split(' ').
+        console.log(words)
+
+
+
+}
+
+splitAndMerge("My name is John", "-");
+
+
+
+// ES6 string addition
+
+function joinStrings(string1, string2) {
+    return `${string1} ${string2}`
+}
