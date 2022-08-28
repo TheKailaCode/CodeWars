@@ -760,3 +760,19 @@ splitAndMerge("My name is John", "-");
 function joinStrings(string1, string2) {
     return `${string1} ${string2}`
 }
+
+
+// Thinkful - Logic Drills: Traffic light
+
+function updateLight(current) {
+    switch (current) {
+        case 'green':
+            return 'yellow';
+            break;
+        case 'yellow':
+            return 'red'
+            break;
+        case 'red':
+            return 'green'
+    }
+}
