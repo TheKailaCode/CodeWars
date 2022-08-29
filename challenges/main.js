@@ -751,7 +751,7 @@ function splitAndMerge(string, separator) {
 
 }
 
-splitAndMerge("My name is John", "-");
+//splitAndMerge("My name is John", "-");
 
 
 
@@ -776,3 +776,38 @@ function updateLight(current) {
             return 'green'
     }
 }
+
+
+// Jaden Casing Strings
+
+// PARAMETER - A string of any legnth with some words where the first letter is lowercase and some uppercase.
+// RESULT - A string where the beginning of each word is uppercase
+// EXAMPLE - 
+//Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+//Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+// PSEUDOCODE - Split the input string with the space as the delimeter. Map over the string and capitalize the 0 index on each element. Join the string back into a sentence.
+
+String.prototype.toJadenCase = function () {
+    let caseStr = str.split(' ').map(el => el[0].toUpperCase).join(' ')
+    //console.log(caseStr)
+
+};
+
+
+// Even numbers in an array
+
+// PARAMETERS - an array of even or odd and positive or negative digits. A number that determines the legnth of output
+// RESULT - An array with a length based on the number parameter containing the final even numnbers from the array
+// EXAMPLE -
+// Test.assertDeepEquals(evenNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9], 3), [4, 6, 8]);
+// Test.assertDeepEquals(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2), [-8, 26]);
+// Test.assertDeepEquals(evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1), [6]);
+// PSEUDOCODE - filter the original array for numbers where mod 2 is equal to 0. Slice the filtered array for .legnth - the number parameter and return
+
+function evenNumbers(array, number) {
+    let evensArr = array.filter(el => el % 2 === 0)
+    console.log(evensArr)
+    let result = evensArr.slice(evensArr.length - number)
+    console.log(result)
+}
+// evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1)
