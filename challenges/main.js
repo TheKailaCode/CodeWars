@@ -811,3 +811,29 @@ function evenNumbers(array, number) {
     console.log(result)
 }
 // evenNumbers([6, -25, 3, 7, 5, 5, 7, -3, 23], 1)
+
+
+// Contamination #1 -String-
+
+// PARAMETERS - A string containing either numbers, letters, punctuation, or empty. Can be any length. Also a char to mutate the string. The char can also be an emoty string.
+// RESULT - The original string mutated with the input char parameter. If the char is empty ithe string should be mutated times the length of the original string. If the input text string is empty, an empty string should be returned no matter what. 
+// EXAMPLE - 
+// Test.assertEquals(contamination("abc","z"), "zzz")
+// Test.assertEquals(contamination("","z"), "")
+// Test.assertEquals(contamination("abc",""), "")
+// Test.assertEquals(contamination("_3ebzgh4","&"), "&&&&&&&&")
+// Test.assertEquals(contamination("//case"," "), "      ")
+// PSEUDOCODE - Do a if statement to see if the original string text is an empty string. if so, return an empty string. If not, do a traditional for loop. On each iteration, replace i with i with the char parameter up until the length of the original string. Return the string.
+
+const contamination = (text, char) => text === '' ? '' : text.split('').map(el => el.replace(el, char)).join('')
+
+// contamination("", "z")
+
+// function contamination(text, char) {
+//     if (text === '') {
+//         return ''
+//     } else {
+//         let result = text.split('').map(el => el.replace(el, char)).join('')
+//         return result
+//     }
+// }
