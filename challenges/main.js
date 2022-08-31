@@ -837,3 +837,24 @@ const contamination = (text, char) => text === '' ? '' : text.split('').map(el =
 //         return result
 //     }
 // }
+
+
+
+// Get number from string
+
+// PARAMETER - A string containing letters, digits, and punctuation
+// RESULT - The number contained in the string parsed into a number
+// EXAMPLE - 
+// (getNumberFromString("1"), 1);
+// (getNumberFromString("123"), 123);
+// (getNumberFromString("this is number: 7"), 
+// PSEUDOCODE -  Set an empty string variable. Split the input string. Do a for loop and and if statement within to see if any value of i is equal to numbers 0 through 9. if so, push them to the empty string. join the empty string. Return the string to Number.
+
+
+function getNumberFromString(s) {
+    let digs = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    let result = s.split('').map(el => digs.includes(el) ? el : '').join('')
+
+    console.log(Number(result))
+}
+getNumberFromString("hello123")
