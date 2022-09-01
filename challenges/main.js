@@ -857,4 +857,26 @@ function getNumberFromString(s) {
 
     console.log(Number(result))
 }
-getNumberFromString("hello123")
+// getNumberFromString("hello123")
+
+
+
+// Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+
+// PARAMETER - A string containing letters, maybe numbers and punctuation, and exclamation marks throughout
+// RETURN - A string with all exclamation marks moved except for one at the end as the final character in the string
+// EXAMPLES - 
+// remove("Hi!!!") === "Hi!"
+// remove("!Hi") === "Hi!"
+// remove("Hi!") === "Hi!"
+// remove("!Hi!") === "Hi!"
+// remove("Hi! Hi!") === "Hi 
+// PSEUDOCODE - Split the string by individual characters. Map over the string and return only the characters that are not an exclamation mark. Join the string. Return the string with an exclamation mark concatenated to the end of it.
+
+
+function remove(string) {
+    let result = string.split('').map(el => el === '!' ? '' : el).join('')
+    console.log(`${result}!`)
+}
+
+// remove("Hi! Hi!")
