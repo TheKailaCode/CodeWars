@@ -880,3 +880,26 @@ function remove(string) {
 }
 
 // remove("Hi! Hi!")
+
+
+
+// Limit string length - 1
+
+// PARAMETERS - A string containing spaces, uppercase and lowercase letters, maybe numbers. Second parameter is an integer.
+// RESULT - A string with the length provided by the limit parameter with elipses attached to the end.
+// EXAMPLE - 
+//solution('Testing String', 3) --> 'Tes...'
+//solution('Testing String', 8) --> 'Testing ...'
+//solution('Test', 8)           --> 'Test'
+// PSEUDOCODE - 
+
+function solution(string, limit) {
+    if (limit > string.length) {
+        console.log(string)
+    } else {
+        console.log(`${string.substring(0, limit)}...`)
+    }
+
+}
+
+// solution('Test', 8)
