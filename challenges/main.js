@@ -903,3 +903,11 @@ function solution(string, limit) {
 }
 
 // solution('Test', 8)
+
+
+
+// String repeat
+
+function repeatStr(n, s) {
+    return s.repeat(n);
+}
