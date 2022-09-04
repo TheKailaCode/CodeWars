@@ -911,3 +911,41 @@ function solution(string, limit) {
 function repeatStr(n, s) {
     return s.repeat(n);
 }
+
+
+// SpeedCode #2 - Array Madness
+
+// PARAMETERS - Two arrays with at least one element in each.
+// RESULTS - A boolean true if the sum of all elements squared in the first array are striclty greater to than the sum of the elements cubed in the second array
+// EXAMPLES - 
+// arrayMadness([4,5,6],[1,2,3]), true
+// arrayMadness([5,6,7],[4,5,6]), false
+// arrayMadness([4,5,6],[3,4,5]), false
+// arrayMadness([3,4,5],[2,3,4]), false
+// arrayMadness([2,3,4],[1,2,3]), false
+// arrayMadness([1,2,3],[0,1,2]), true
+// arrayMadness([5,3,2,4,1],[15]), false
+// arrayMadness([2,5,3,4,1],[3,3,3,3,3]), false
+// arrayMadness([1,3,5,2,4],[2,2,2,2,2,2,2,1]), false
+// arrayMadness([1,2,3,4,5],[2,2,2,2,2,2,1,1,1]), true
+// arrayMadness([2,4,6,8,10,12,14],[1,3,5,7,9,11,13]), false
+// PSEUDOCODE - Map over each array to multiply the elements in first array by themselves and cube the elements in the second. compare each element for greater than in a double for loop. Return true if the elements in the first array are greater than those in the second
+
+function arrayMadness(a, b) {
+    let double = a.map(el => el ** 2)
+    let triple = b.map(el => el ** 3)
+    let result = []
+    for (let i = 0; i <= double.length; i++) {
+        for (let j = 0; j <= triple.length; j++) {
+            if (a[i] > b[j]) {
+                result.push(true)
+            } else {
+                result.push(false)
+            }
+        }
+    }
+    console.log(result)
+    console.log(result.every(x => x === true))
+}
+
+arrayMadness([4, 5, 6], [1, 2, 3])
