@@ -937,7 +937,7 @@ function arrayMadness(a, b) {
     let result = []
     for (let i = 0; i <= double.length; i++) {
         for (let j = 0; j <= triple.length; j++) {
-            if (a[i] > b[j]) {
+            if (double[i] > triple[j]) {
                 result.push(true)
             } else {
                 result.push(false)
@@ -949,3 +949,12 @@ function arrayMadness(a, b) {
 }
 
 arrayMadness([4, 5, 6], [1, 2, 3])
+
+
+// Find the position!
+
+function position(letter) {
+    let alphabet = ' abcdefghijklmnopqrstuvwxyz'
+
+    return `Position of alphabet: ${alphabet.indexOf(letter)}`
+}
