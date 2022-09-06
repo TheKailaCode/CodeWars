@@ -948,7 +948,7 @@ function arrayMadness(a, b) {
     console.log(result.every(x => x === true))
 }
 
-arrayMadness([4, 5, 6], [1, 2, 3])
+//arrayMadness([4, 5, 6], [1, 2, 3])
 
 
 // Find the position!
@@ -995,7 +995,7 @@ function arrayMadness(a, b) {
     console.log(result.every(x => x === true))
 }
 
-arrayMadness([4, 5, 6], [1, 2, 3])
+//arrayMadness([4, 5, 6], [1, 2, 3])
 
 // Shortest Word
 
@@ -1009,9 +1009,10 @@ arrayMadness([4, 5, 6], [1, 2, 3])
 
 function findShort(s) {
     //let stringArr = s.split(' ')
-    let shortLength = s.split(' ').map(el => el.length < 1 + el.legnth ? el.legnth : '')
+    let shortLength = s.split(' ').map(el => el.length)
+    let result = shortLength.sort((a, b) => a - b)
 
-    console.log(shortLength)
+    console.log(Math.min(...result))
 }
 
-// findShort("Let's travel abroad shall we")
+// findShort("bitcoin take over the world maybe who knows perhaps")
