@@ -1008,7 +1008,6 @@ function arrayMadness(a, b) {
 // PSEUDOCODE - Split the input string by the spaces in between each word. Set an empty variable to hold the length of the shortest words. Do a for each loop where i represents each word in the array. Compare the length of i to the next length of i to determine if it is greater or less than the previous i. If it is less than the previous i, the empty variable is not equal to the length of the smallest i. Once the iteration is complete, return the empty variable.
 
 function findShort(s) {
-    //let stringArr = s.split(' ')
     let shortLength = s.split(' ').map(el => el.length)
     let result = shortLength.sort((a, b) => a - b)
 
@@ -1016,3 +1015,23 @@ function findShort(s) {
 }
 
 // findShort("bitcoin take over the world maybe who knows perhaps")
+
+
+
+// Sum of Array Averages
+
+// PARAMETER - A multilevel array with a maximum of 50 subarrays
+// RESULTS - The sum of the average of each subarray rounded down to the nearest whole number
+// EXAMPLE - 
+// (sumAverage([[3, 4, 1, 3, 5, 1, 4], [21, 54, 33, 21, 77]]), 44);
+// (sumAverage([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]]), -6)
+// PSEDOCODE - Create an empty variable to hold to sum of the averages. Map over the array and use the reduce method on each element to get the sum of the elements in the subarray and then divide it by the legnth of the element. Use the empty variable to reduce over the array that was returned from mapping over the array. Return that variable.
+
+const sumAverage = (arr) => {
+    let avg = arr.map(el => el.reduce((acc, c) => acc + c) / el.length)
+    console.log(avg)
+    let result = avg.reduce((acc, c) => acc + c)
+    console.log(Math.floor(result))
+}
+
+// sumAverage([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]])
