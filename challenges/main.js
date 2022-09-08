@@ -1035,3 +1035,20 @@ const sumAverage = (arr) => {
 }
 
 // sumAverage([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]])
+
+
+
+// Use map() to double the values in an array
+
+// PARAMETER - An array containing positive and negative numbers of any size
+// RESULT - An array containing the numbers doubled from the original array
+// EXAMPLE -
+// double(test1), [2,4,6,8,10]
+// double(test2), [142,-1096,24.6,62830]
+// PSEUDOCODE - Us the map function to multiple each element in the array by 2. Return the new array that is created. 
+
+function double(array) {
+    console.log(array.map(el => el * 2))
+}
+
+// double([71, -548, 12.3, 31415])
