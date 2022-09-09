@@ -1052,3 +1052,35 @@ function double(array) {
 }
 
 // double([71, -548, 12.3, 31415])
+
+
+
+// Product of Array Items
+
+// PARAMETER - An array containing positive numbers, negative numbers, zeros, empty, or null.
+// RESULT - The product of all of the numbers in the array or null if the array is null or empty.
+// EXAMPLE - 
+// product([5, 4, 1, 3, 9]), 540)
+// product([-2, 6, 7, 8]), -672)           
+// product([10]), 10);
+// product([0, 2, 9, 7]), 0)       
+// product(null), null)
+// product([]), null)
+// PSEUDOCODE - Use a ternaray operation to use the reduce method but with multiplication which will return the product of each digit or return null
+
+
+// function product(values) {
+//     if (values === null) {
+//         console.log(null)
+//     } else if (values.length === 0) {
+//         console.log(null)
+//     } else {
+//         console.log(values.reduce((acc, c) => acc * c))
+//     }
+// }
+
+function product(values) {
+    console.log((values === null || values.length === 0) ? null : values.reduce((acc, c) => acc * c))
+}
+
+// product(null)
