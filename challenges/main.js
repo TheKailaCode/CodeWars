@@ -1084,3 +1084,27 @@ function product(values) {
 }
 
 // product(null)
+
+
+
+// Array comparator
+
+// PARAMETERS - Two array each with unique elements of any length
+// RESULTS - An integer reflecting the number of elements in the second array that are also in the first array
+// EXAMPLE - 
+// matchArrays(['Perl','Closure','JavaScript'], ['Go', 'C++','Erlang']),0);
+// matchArrays(['incapsulation','OOP','array'], ['time', 'propert','paralelism','OOP']),1
+// PSEUDOCODE - Use a variable to filter the second array by the first array and return 
+
+function matchArrays(v, r) {
+    let newArr = []
+    for (let i = 0; i <= v.length; i++) {
+        for (let j = 0; r <= j.length; j++) {
+            if (v[i] === r[j]) {
+                newArr.push(i)
+            }
+        }
+    }
+    console.log(newArr)
+}
+// matchArrays(['incapsulation', 'OOP', 'array'], ['time', 'propert', 'paralelism', 'OOP'])
