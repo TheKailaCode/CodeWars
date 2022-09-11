@@ -1108,3 +1108,8 @@ function matchArrays(v, r) {
     console.log(newArr)
 }
 // matchArrays(['incapsulation', 'OOP', 'array'], ['time', 'propert', 'paralelism', 'OOP'])
+
+
+// Be Concise IV - Index of an element in an array
+
+const find = (array, element) => array.indexOf(element) > -1 ? array.indexOf(element) : "Not found"
