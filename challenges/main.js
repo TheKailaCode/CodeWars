@@ -1113,3 +1113,42 @@ function matchArrays(v, r) {
 // Be Concise IV - Index of an element in an array
 
 const find = (array, element) => array.indexOf(element) > -1 ? array.indexOf(element) : "Not found"
+
+
+
+
+// Sort array by string length
+
+// PARAMETERS - An array of string words of multiple lengths and casing
+//  RESULTS - The same input array sorted in increasing order from the shortest word to the longest word in the array
+// EXAMPLES - 
+// sortByLength(["Beg", "Life", "I", "To"]),["I", "To", "Beg", "Life"]
+// sortByLength(["", "Moderately", "Brains", "Pizza"]),["", "Pizza", "Brains", "Moderately"]
+// sortByLength(["Longer", "Longest", "Short"]),["Short", "Longer", "Longest"]
+// PSEUDOCODE - 
+
+function sortByLength(array) {
+    let result = array.sort((a, b) => a.length - b.length)
+    console.log(result)
+}
+
+// sortByLength(["Longer", "Longest", "Short"])
+
+
+// Sum of two lowest positive integers
+
+// PARAMETERS - An array with at least 4 integers of any size integers. No floats or negative integers wiill be iincluded.
+// RESULTS - An integer representing the sum of the two smallest integers in the input array.
+// EXAMPLES -
+// sumTwoSmallestNumbers([5, 8, 12, 19, 22]), 13 , "Sum should be 13"
+// sumTwoSmallestNumbers([15, 28, 4, 2, 43]), 6 , "Sum should be 6"
+// sumTwoSmallestNumbers([3, 87, 45, 12, 7]), 10 , "Sum should be 10"
+// sumTwoSmallestNumbers([23, 71, 33, 82, 1]), 24 , "Sum should be 24"
+// PSEUDOCODE - Sort the orginal array in increasing order. Return the sum of array at index 0 plus the array at index 1.
+
+function sumTwoSmallestNumbers(numbers) {
+    let s = numbers.sort((a, b) => a - b)
+    console.log(s[0] + s[1])
+}
+
+// sumTwoSmallestNumbers([23, 71, 33, 82, 1])
