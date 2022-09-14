@@ -1152,3 +1152,18 @@ function sumTwoSmallestNumbers(numbers) {
 }
 
 // sumTwoSmallestNumbers([23, 71, 33, 82, 1])
+
+
+// Odd or Even?
+
+// PARAMETERS - An array of integers of any length. An empty array should be considered an array with integer 0.
+// RESULTS - A string "even" or "odd" based on the sum of the integers in the input array
+// EXAMPLES - 
+// oddOrEven([0]), 'even'
+// oddOrEven([1]), 'odd'
+// oddOrEven([]), 'even'
+// PSEUDOCODE - return a ternary operation to reduce the input array and modulo it by 2 to strictly equal 0 and if true return even and if false return odd
+
+const oddOrEven = array => (array.length === 0 || array.reduce((acc, c) => acc + c) % 2 === 0) ? "even" : "odd"
+
+// console.log(oddOrEven([]))
