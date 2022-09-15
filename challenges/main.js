@@ -1167,3 +1167,18 @@ function sumTwoSmallestNumbers(numbers) {
 const oddOrEven = array => (array.length === 0 || array.reduce((acc, c) => acc + c) % 2 === 0) ? "even" : "odd"
 
 // console.log(oddOrEven([]))
+
+
+// The highest profit wins!
+
+// PARAMETERS - An array of integers with the length of at least 1. 
+// RESULTS - An array of two integers reflecting the largest number and smallest number in the input array.
+// EXAMPLES - 
+// [1,2,3,4,5] --> [1,5]
+// [2334454,5] --> [5,2334454]
+// [1]         --> [1,1]
+// PSEUDOCODE - Return the minimum integer using the spread syntax with Math.min for the element at index 0 in the returned array and Math.max for the element at index 1 in the returned array.
+function minMax(arr) {
+    console.log([Math.min(...arr), Math.max(...arr)])
+}
+// minMax([1])
