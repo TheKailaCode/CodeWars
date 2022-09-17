@@ -1179,6 +1179,23 @@ const oddOrEven = array => (array.length === 0 || array.reduce((acc, c) => acc +
 // [1]         --> [1,1]
 // PSEUDOCODE - Return the minimum integer using the spread syntax with Math.min for the element at index 0 in the returned array and Math.max for the element at index 1 in the returned array.
 function minMax(arr) {
-    console.log([Math.min(...arr), Math.max(...arr)])
+    //console.log([Math.min(...arr), Math.max(...arr)])
 }
 // minMax([1])
+
+
+// JavaScript Array Filter
+
+// PARAMETERS - An array of integers of any length with odd, even, negative, or postive integers
+// RESULTS - An array of integers containing all of the even numbers that were in the input array
+// EXAMPLES - 
+// getEvenNumbers([1,2,3,6,8,10]), [2,6,8,10])
+// getEvenNumbers([1,2]), [2])
+// getEvenNumbers([12,14,15]), [12,14])
+// getEvenNumbers([13,15]), [])
+// getEvenNumbers([1,3,9]), [])
+// PSEUDOCODE - Return a function using the map method where the elements being interated over are modulo by 2 and returned if the result of the equation is 0. 
+
+const getEvenNumbers = numbersArray => numbersArray.filter(el => el % 2 === 0)
+
+console.log(getEvenNumbers([1, 3, 9]))
