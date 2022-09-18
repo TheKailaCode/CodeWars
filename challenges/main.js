@@ -1198,4 +1198,18 @@ function minMax(arr) {
 
 const getEvenNumbers = numbersArray => numbersArray.filter(el => el % 2 === 0)
 
-console.log(getEvenNumbers([1, 3, 9]))
+// console.log(getEvenNumbers([1, 3, 9]))
+
+
+// Smallest value of an array
+
+// PARAMETERS - An array of integers of any value and length. 
+// RESULTS - The smallest integer from the input array
+// EXAMPLES - 
+// (min([1,2,3,4,5], 'value'), 1
+// (min([1,2,3,4,5], 'index'), 0
+// PSEUDOCODE - Return the input array spread into the Math.min operation 
+
+const min = (arr, toReturn) => toReturn === 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr))
+
+console.log(min([1, 2, 3, 4, 5], 'index'))
