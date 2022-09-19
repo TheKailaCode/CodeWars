@@ -1047,9 +1047,9 @@ const sumAverage = (arr) => {
 // double(test2), [142,-1096,24.6,62830]
 // PSEUDOCODE - Us the map function to multiple each element in the array by 2. Return the new array that is created. 
 
-function double(array) {
-    console.log(array.map(el => el * 2))
-}
+//function double(array) {
+//console.log(array.map(el => el * 2))
+//}
 
 // double([71, -548, 12.3, 31415])
 
@@ -1148,7 +1148,7 @@ function sortByLength(array) {
 
 function sumTwoSmallestNumbers(numbers) {
     let s = numbers.sort((a, b) => a - b)
-    console.log(s[0] + s[1])
+    //console.log(s[0] + s[1])
 }
 
 // sumTwoSmallestNumbers([23, 71, 33, 82, 1])
@@ -1212,4 +1212,21 @@ const getEvenNumbers = numbersArray => numbersArray.filter(el => el % 2 === 0)
 
 const min = (arr, toReturn) => toReturn === 'value' ? Math.min(...arr) : arr.indexOf(Math.min(...arr))
 
-console.log(min([1, 2, 3, 4, 5], 'index'))
+// console.log(min([1, 2, 3, 4, 5], 'index'))
+
+
+// Use map() to double the values in an array
+
+// PARAMETERS - An array of integers that may be negative or positive or odd or even
+// RESULTS - Each number in the input array multiplied by two. Must use the map function
+// EXAMPLES - 
+// var test1 = [1,2,3,4,5]
+// var test2 = [71,-548,12.3,31415]
+
+// double(test1), [2,4,6,8,10]
+// double(test2), [142,-1096,24.6,62830]
+// PSEUDOCODE - Use the map function to map over each element in the array and return each element multiplied times two
+
+const double = array => array.map(el => el * 2)
+
+//console.log(double([71, -548, 12.3, 31415]))
