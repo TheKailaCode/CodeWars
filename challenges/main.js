@@ -1027,12 +1027,12 @@ function findShort(s) {
 // (sumAverage([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]]), -6)
 // PSEDOCODE - Create an empty variable to hold to sum of the averages. Map over the array and use the reduce method on each element to get the sum of the elements in the subarray and then divide it by the legnth of the element. Use the empty variable to reduce over the array that was returned from mapping over the array. Return that variable.
 
-const sumAverage = (arr) => {
-    let avg = arr.map(el => el.reduce((acc, c) => acc + c) / el.length)
-    console.log(avg)
-    let result = avg.reduce((acc, c) => acc + c)
-    console.log(Math.floor(result))
-}
+// const sumAverage = (arr) => {
+//     let avg = arr.map(el => el.reduce((acc, c) => acc + c) / el.length)
+//     console.log(avg)
+//     let result = avg.reduce((acc, c) => acc + c)
+//     console.log(Math.floor(result))
+// }
 
 // sumAverage([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]])
 
@@ -1230,3 +1230,19 @@ const min = (arr, toReturn) => toReturn === 'value' ? Math.min(...arr) : arr.ind
 const double = array => array.map(el => el * 2)
 
 //console.log(double([71, -548, 12.3, 31415]))
+
+
+// Sum of Array Averages
+
+// PARAMETERS - An array containing up to 50 subarrays with integers ranging from -100 to 100.
+// RESULTS - An integer representing the sum of the average of all of the subarrays from the input array.
+// EXAMPLES - 
+// sumAverage([[3, 4, 1, 3, 5, 1, 4], [21, 54, 33, 21, 77]]), 44
+// sumAverage([[-4, 3, -8, -2], [2, 9, 1, -5], [-7, -2, -6, -4]]), -6
+// PSEUDOCODE - return the result from mapping over the input array. As each element is iterated over, the array that is being held at each index will be reduced using the sum operator then divided by the length of the element. The entire map function will be reduced using the sum operator as well because the map will return an array of integers that need to be added together to produce the result. 
+
+const sumAverage = (arr) => {
+    console.log(Math.floor((arr.map(el => el.reduce((a, b) => a + b) / el.length).reduce((a, b) => a + b))))
+}
+
+// sumAverage([[3, 4, 1, 3, 5, 1, 4], [21, 54, 33, 21, 77]])
