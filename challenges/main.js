@@ -1246,3 +1246,21 @@ const sumAverage = (arr) => {
 }
 
 // sumAverage([[3, 4, 1, 3, 5, 1, 4], [21, 54, 33, 21, 77]])
+
+
+
+// Is every value in the array an array?
+
+// PARAMETERS - An array of any length with multiple dimensions.
+// RESULTS - A boolean true or false based on whether the second dimension of the array is also an array
+// EXAMPLE - 
+// arrCheck([]), true
+// arrCheck([['string']]), true
+// arrCheck([[],{}]), false
+// arrCheck([[1],[2],[3]]), true
+// arrCheck(['A', 'R', 'R', 'A', 'Y']), false
+// PSEUDOCODE - Use the every array method to check if each element in the array is also an array by using the isArray method which will return true or false.
+
+const arrCheck = value => value.every(el => el.isArray ? true : false)
+
+console.log(arrCheck([[1], [2], [3]]))
