@@ -1263,4 +1263,29 @@ const sumAverage = (arr) => {
 
 const arrCheck = value => value.every(el => el.isArray ? true : false)
 
-console.log(arrCheck([[1], [2], [3]]))
+//console.log(arrCheck([[1], [2], [3]]))
+
+
+// The maximum sum value of ranges -- Simple version
+
+
+// PARAMETERS - Two arrays. the first array parameter contains a list of integers positive negative or 0 with at least 5 elements. The second parameter is an array with nested arrays containing two elements that reflect the range. There will be at least one element in the second array parameter.
+// RESULTS - An integer reflecting the highest sum amongst the range of inters from the input arrays.
+// EXAMPLES - 
+// maxSum([1,-2,3,4,-5,-4,3,2,1],[[1,3],[0,4],[6,8]]) === 6
+// maxSum([1,-2,3,4,-5,-4,3,2,1],[[1,3]]) === 5
+// maxSum([1,-2,3,4,-5,-4,3,2,1],[[1,4],[2,5]]) === 0
+// PSEUDOCODE - Create a new variable to hold the sorted input array of integers in increasing order. 
+
+
+
+// Reverse words
+
+function reverseWords(str) {
+    let strArray = str.split(' ')
+    console.log(strArray)
+    let result = strArray.map(word => word.split('').reverse().join('')).join(' ')
+    console.log(result)
+}
+
+// reverseWords('double  spaced  words')
