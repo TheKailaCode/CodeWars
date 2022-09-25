@@ -1289,3 +1289,20 @@ function reverseWords(str) {
 }
 
 // reverseWords('double  spaced  words')
+
+
+// Square(n) Sum
+
+// PARAMETERS - An array of integers of any length and possibly empty. Integers may be positive or negative.
+// RESULTS - An integer reflecting the sum of each integer squared from the input array.
+// EXAMPLES - 
+// squareSum([1,2]), 5
+// squareSum([0, 3, 4, 5]), 50
+// squareSum([]), 0
+// PSEUDOCODE - map over the input array to square each digit. Reduce over the resulting array with the sum operation to get the sum of each square and return. 
+
+function squareSum(numbers) {
+    // console.log(numbers.map(el => el * el).reduce((acc, c) => acc + c))
+    console.log(numbers.reduce((acc, c) => acc + (c * c), 0)) // refactor
+}
+// squareSum([])
