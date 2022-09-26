@@ -1306,3 +1306,21 @@ function squareSum(numbers) {
     console.log(numbers.reduce((acc, c) => acc + (c * c), 0)) // refactor
 }
 // squareSum([])
+
+
+// Sum of positive
+
+// PARAMETERS - An array containing positive and negative numbers of any length.
+// RESULTS - An integer reflecting the sum of all of the positive numbers from the input array.
+// EXAMPLES - 
+// positiveSum([1,2,3,4,5]),15
+// positiveSum([1,-2,3,4,5]),13
+// positiveSum([]),0
+// positiveSum([-1,-2,-3,-4,-5]),0
+// positiveSum([-1,2,3,4,-5]),9
+// PSEUDOCODE - Use a ternerary operator to test for the integers that are greater than 0. If they are, reduce over them to get the sum. If not, return 0.
+
+function positiveSum(arr) {
+    console.log(arr.filter(el => el > 0).reduce((a, b) => a + b, 0))
+}
+// positiveSum([])
