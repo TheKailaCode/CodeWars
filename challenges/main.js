@@ -1324,3 +1324,20 @@ function positiveSum(arr) {
     console.log(arr.filter(el => el > 0).reduce((a, b) => a + b, 0))
 }
 // positiveSum([])
+
+
+// Disemvowel Trolls
+
+// PARAMETERS - A string containting vowels, consonants, and punctuation. Letters may be upper or lowercase.
+// RESULT - The input string returned with all of the vowels removed.
+// EXAMPLES - 
+// disemvowel("This website is for losers LOL!"), "Ths wbst s fr lsrs LL!"
+// disemvowel("No offense but,\nYour writing is among the worst I've ever read"), "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd"
+// disemvowel("What are you, a communist?"), "Wht r y,  cmmnst?"
+// PSEUDOCODE - Create a variable holding an array of all vowels (not including 'y'). Split the input string into an array of characters. Map over the array and use the includes method to determine if each element contains any of the letters from the vowels array. If it does, return an empty space and if not, return the element then join the string back together without a delimeter.
+function disemvowel(str) {
+    let arr = str.split('')
+    console.log(arr.filter(el => el.toLowerCase() != "i" && el.toLowerCase() != "o" && el.toLowerCase() != "u" && el.toLowerCase() != "a" && el.toLowerCase() != "e").join(''))
+}
+
+// disemvowel("This website is for losers LOL!")
