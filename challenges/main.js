@@ -1341,3 +1341,30 @@ function disemvowel(str) {
 }
 
 // disemvowel("This website is for losers LOL!")
+
+
+// Compare powers
+
+// PARAMETERS - Two parameters will be passed in. Each parameter passed in will be an array containg 2 positive integers where array[0] is the base of an exponent and array[1] is the exponent.
+// RESULTS - Either 1, 0, or -1 based on if the first exponent is greater (-1), 0 if the exponents are equal, and 1 otherwise.
+// EXAMPLES - 
+// comparePowers([2,10],[2,15])===1
+// comparePowers([2,10],[3,10])===1
+// comparePowers([2,10],[2,10])===0
+// comparePowers([3,9],[5,6])===-1
+// comparePowers([7,7],[5,8])===-1
+// PSEUDOCODE - Set 2 variables. The first to hold the value of the first parameter in form of an exponent and the second variable to do the same but for the second parameter. Use a switch case to compare the values and return 1, -1, or 0 based on the results.
+
+function comparePowers(n1, n2) {
+    let x = n1[0] ** n1[1]
+    let y = n2[0] ** n2[1]
+    console.log([x, y])
+    if (x > y) {
+        console.log(-1)
+    } else if (x === y) {
+        console.log(0)
+    } else {
+        console.log(1)
+    }
+}
+// comparePowers([976, 680], [287, 870]) --Incomplete
