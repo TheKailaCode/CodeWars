@@ -1368,3 +1368,17 @@ function comparePowers(n1, n2) {
     }
 }
 // comparePowers([976, 680], [287, 870]) --Incomplete
+
+
+// Sum without highest and lowest number
+
+function sumArray(array) {
+    if (array === null || array === undefined || array.length <= 2) {
+        return 0
+    } else {
+        let newArr = array.sort((a, b) => a - b)
+        let sum = newArr.reduce((acc, c) => acc + c) - newArr[0] - newArr[newArr.length - 1]
+        return sum
+    }
+
+}
