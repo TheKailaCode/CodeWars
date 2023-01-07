@@ -1384,9 +1384,40 @@ function sumArray(array) {
 }
 
 // Multiply
-
 // This code does not execute properly. Try to figure out why.
 
 function multiply(a, b) {
-    console.log(a * b)
+    //console.log(a * b)
 }
+
+// Even or Odd
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+function evenOrOdd(number) {
+    return number % 2 === 0 ? 'Even' : 'Odd'
+}
+// console.log(evenOrOdd(-10))
+
+
+// Sum of positive
+
+// PARAMETERS - Given an array of numbers possibly be an empty, can have negative or positive values. Array can be any legnth.
+// RESULTS - Sum of all of the positive digits in the given array 
+// EXAMPLES - 
+//     positiveSum([1,2,3,4,5]),15
+//     positiveSum([1,-2,3,4,5]),13
+//     positiveSum([]),0
+//     positiveSum([-1,-2,-3,-4,-5]),0
+//     positiveSum([-1,2,3,4,-5]),9
+// PSEUDOCODE - Compare each value in the array to zero. If the value in the array is greater than zero add the sum of each of those values set to a variable. If array is empty, return 0. 
+
+function positiveSum(arr) {
+    let sum = 0
+    for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] >= 0) {
+            sum += arr[i]
+        }
+    }
+    console.log(sum / arr.length)
+}
+//positiveSum([1, 2, 3, 4, 5])
